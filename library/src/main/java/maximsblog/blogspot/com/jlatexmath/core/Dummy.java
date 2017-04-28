@@ -29,6 +29,13 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
+import maximsblog.blogspot.com.jlatexmath.core.atom.Atom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.CharSymbol;
+import maximsblog.blogspot.com.jlatexmath.core.atom.FixedCharAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.Row;
+import maximsblog.blogspot.com.jlatexmath.core.atom.SpaceAtom;
+import maximsblog.blogspot.com.jlatexmath.core.box.Box;
+
 /**
  * Used by RowAtom. The "textSymbol"-property and the type of an atom can change
  * (according to the TeX-algorithms used). Or this atom can be replaced by a

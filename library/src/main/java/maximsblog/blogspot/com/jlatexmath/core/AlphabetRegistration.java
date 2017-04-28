@@ -28,7 +28,7 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
-import java.lang.Character.UnicodeBlock;
+import maximsblog.blogspot.com.jlatexmath.core.exception.AlphabetRegistrationException;
 
 public interface AlphabetRegistration {
 

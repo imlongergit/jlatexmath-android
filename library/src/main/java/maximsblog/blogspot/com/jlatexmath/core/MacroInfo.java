@@ -32,6 +32,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 
+import maximsblog.blogspot.com.jlatexmath.core.exception.ParseException;
+import maximsblog.blogspot.com.jlatexmath.core.paser.TeXParser;
+
 public class MacroInfo {
 
 	public static HashMap<String, MacroInfo> Commands = new HashMap<String, MacroInfo>(

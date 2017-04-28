@@ -29,18 +29,26 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
-import java.util.Map;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
-import java.lang.Character.UnicodeBlock;
+import android.graphics.Typeface;
+
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-import android.content.Context;
-import android.graphics.Typeface;
+import maximsblog.blogspot.com.jlatexmath.core.atom.SymbolAtom;
+import maximsblog.blogspot.com.jlatexmath.core.exception.AlphabetRegistrationException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.FontAlreadyLoadedException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.ResourceParseException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.SymbolMappingNotFoundException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.TextStyleMappingNotFoundException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.XMLResourceParseException;
+import maximsblog.blogspot.com.jlatexmath.core.paser.DefaultTeXFontParser;
+import maximsblog.blogspot.com.jlatexmath.core.paser.TeXParser;
 
 /**
  * The default implementation of the TeXFont-interface. All font information is
@@ -53,12 +61,12 @@ public class DefaultTeXFont implements TeXFont {
 	/**
 	 * No extension part for that kind (TOP,MID,REP or BOT)
 	 */
-	protected static final int NONE = -1;
+	public static final int NONE = -1;
 
-	protected final static int NUMBERS = 0;
-	protected final static int CAPITALS = 1;
-	protected final static int SMALL = 2;
-	protected final static int UNICODE = 3;
+	public final static int NUMBERS = 0;
+	public final static int CAPITALS = 1;
+	public final static int SMALL = 2;
+	public final static int UNICODE = 3;
 
 	/**
 	 * Number of font ids in a single font description file.
@@ -73,9 +81,9 @@ public class DefaultTeXFont implements TeXFont {
 
 	private static boolean magnificationEnable = true;
 
-	protected static final int TOP = 0, MID = 1, REP = 2, BOT = 3;
+	public static final int TOP = 0, MID = 1, REP = 2, BOT = 3;
 
-	protected static final int WIDTH = 0, HEIGHT = 1, DEPTH = 2, IT = 3;
+	public static final int WIDTH = 0, HEIGHT = 1, DEPTH = 2, IT = 3;
 
 	public static List<Character.UnicodeBlock> loadedAlphabets = new ArrayList<Character.UnicodeBlock>();
 	public static Map<Character.UnicodeBlock, AlphabetRegistration> registeredAlphabets = new HashMap<Character.UnicodeBlock, AlphabetRegistration>();

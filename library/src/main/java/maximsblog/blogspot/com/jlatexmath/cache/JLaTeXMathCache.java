@@ -36,12 +36,11 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 import maximsblog.blogspot.com.jlatexmath.core.Insets;
-import maximsblog.blogspot.com.jlatexmath.core.ParseException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.ParseException;
 import maximsblog.blogspot.com.jlatexmath.core.TeXFormula;
 import maximsblog.blogspot.com.jlatexmath.core.TeXIcon;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 

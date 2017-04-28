@@ -29,6 +29,10 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
+import maximsblog.blogspot.com.jlatexmath.core.box.Box;
+import maximsblog.blogspot.com.jlatexmath.core.box.GlueBox;
+import maximsblog.blogspot.com.jlatexmath.core.paser.GlueSettingsParser;
+
 /**
  * Represents glue by its 3 components. Contains the "glue rules".
  */

@@ -28,8 +28,7 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
-import java.util.HashMap;
-import java.util.regex.Matcher;
+import maximsblog.blogspot.com.jlatexmath.core.exception.ParseException;
 
 public class NewEnvironmentMacro extends NewCommandMacro {
 

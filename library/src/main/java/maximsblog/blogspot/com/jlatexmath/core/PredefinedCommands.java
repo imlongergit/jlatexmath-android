@@ -28,9 +28,9 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
-final class PredefinedCommands {
+public final class PredefinedCommands {
 
-	PredefinedCommands() {
+	public PredefinedCommands() {
 	}
 
 	static {

@@ -28,6 +28,16 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
+import maximsblog.blogspot.com.jlatexmath.core.atom.Atom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.ScaleAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.SmashedAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.SpaceAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.SymbolAtom;
+import maximsblog.blogspot.com.jlatexmath.core.box.Box;
+import maximsblog.blogspot.com.jlatexmath.core.box.HorizontalBox;
+import maximsblog.blogspot.com.jlatexmath.core.box.ScaleBox;
+import maximsblog.blogspot.com.jlatexmath.core.box.StrutBox;
+
 /**
  * Responsible for creating a box containing a delimiter symbol that exists in
  * different sizes.

@@ -31,6 +31,8 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
+import maximsblog.blogspot.com.jlatexmath.core.atom.SpaceAtom;
+
 /**
  * Contains the used TeXFont-object, color settings and the current style in
  * which a formula must be drawn. It's used in the createBox-methods. Contains
@@ -114,12 +116,12 @@ public class TeXEnvironment {
 		return scaleFactor;
 	}
 
-	protected TeXEnvironment copy() {
+	public TeXEnvironment copy() {
 		return new TeXEnvironment(style, scaleFactor, tf, background, color,
 				textStyle, smallCap);
 	}
 
-	protected TeXEnvironment copy(TeXFont tf) {
+	public TeXEnvironment copy(TeXFont tf) {
 		TeXEnvironment te = new TeXEnvironment(style, scaleFactor, tf,
 				background, color, textStyle, smallCap);
 		te.textwidth = textwidth;

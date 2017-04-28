@@ -28,10 +28,11 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
-import java.lang.Character.UnicodeBlock;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.lang.ClassLoader;
+
+import maximsblog.blogspot.com.jlatexmath.core.exception.AlphabetRegistrationException;
 
 public class URLAlphabetRegistration implements AlphabetRegistration {
 

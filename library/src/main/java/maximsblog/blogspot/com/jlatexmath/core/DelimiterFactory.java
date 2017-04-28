@@ -31,6 +31,11 @@
 
 package maximsblog.blogspot.com.jlatexmath.core; // NOPMD
 
+import maximsblog.blogspot.com.jlatexmath.core.atom.SymbolAtom;
+import maximsblog.blogspot.com.jlatexmath.core.box.Box;
+import maximsblog.blogspot.com.jlatexmath.core.box.CharBox;
+import maximsblog.blogspot.com.jlatexmath.core.box.VerticalBox;
+
 /**
  * Responsible for creating a box containing a delimiter symbol that exists in
  * different sizes.

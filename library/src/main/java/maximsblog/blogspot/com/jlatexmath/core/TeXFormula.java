@@ -32,25 +32,43 @@
 package maximsblog.blogspot.com.jlatexmath.core;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.List;
 import java.util.LinkedList;
-import java.util.Set;
-import java.util.Stack;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.Character.UnicodeBlock;
 
-import maximsblog.blogspot.com.jlatexmath.R;
+import maximsblog.blogspot.com.jlatexmath.core.atom.ArrayOfAtoms;
+import maximsblog.blogspot.com.jlatexmath.core.atom.Atom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.BreakMarkAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.ColorAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.EmptyAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.MatrixAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.MiddleAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.RomanAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.RowAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.SpaceAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.TypedAtom;
+import maximsblog.blogspot.com.jlatexmath.core.atom.VCenteredAtom;
+import maximsblog.blogspot.com.jlatexmath.core.box.Box;
+import maximsblog.blogspot.com.jlatexmath.core.box.HorizontalBox;
+import maximsblog.blogspot.com.jlatexmath.core.box.StrutBox;
+import maximsblog.blogspot.com.jlatexmath.core.exception.FormulaNotFoundException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.InvalidAtomTypeException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.InvalidUnitException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.ParseException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.ResourceParseException;
+import maximsblog.blogspot.com.jlatexmath.core.paser.DefaultTeXFontParser;
+import maximsblog.blogspot.com.jlatexmath.core.paser.PredefinedTeXFormulaParser;
+import maximsblog.blogspot.com.jlatexmath.core.paser.TeXFormulaSettingsParser;
+import maximsblog.blogspot.com.jlatexmath.core.paser.TeXParser;
+
 import android.annotation.SuppressLint;
-import android.content.res.AssetManager;
 import android.graphics.Bitmap;
-import android.graphics.Bitmap.CompressFormat;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -109,7 +127,7 @@ public class TeXFormula {
 	private static final int UNDER_DEL = 1;
 
 	// for comparing floats with 0
-	protected static final float PREC = 0.0000001f;
+	public static final float PREC = 0.0000001f;
 
 	// predefined TeXFormula's
 	public static Map<String, TeXFormula> predefinedTeXFormulas = new HashMap<String, TeXFormula>(
@@ -125,7 +143,7 @@ public class TeXFormula {
 
 	public List<MiddleAtom> middle = new LinkedList<MiddleAtom>();
 
-	protected Map<String, String> jlmXMLMap;
+	public Map<String, String> jlmXMLMap;
 	private TeXParser parser;
 
 	static {
@@ -331,11 +349,11 @@ public class TeXFormula {
 	 * @throws ParseException
 	 *             if the string could not be parsed correctly
 	 */
-	protected TeXFormula(TeXParser tp, String s) throws ParseException {
+	public TeXFormula(TeXParser tp, String s) throws ParseException {
 		this(tp, s, null);
 	}
 
-	protected TeXFormula(TeXParser tp, String s, boolean firstpass)
+	public TeXFormula(TeXParser tp, String s, boolean firstpass)
 			throws ParseException {
 		this.textStyle = null;
 		this.jlmXMLMap = tp.formula.jlmXMLMap;
@@ -374,7 +392,7 @@ public class TeXFormula {
 		}
 	}
 
-	protected TeXFormula(TeXParser tp, String s, String textStyle,
+	public TeXFormula(TeXParser tp, String s, String textStyle,
 			boolean firstpass, boolean space) throws ParseException {
 		this.textStyle = textStyle;
 		this.jlmXMLMap = tp.formula.jlmXMLMap;
@@ -1145,10 +1163,10 @@ public class TeXFormula {
 		}
 	}
 
-	static class FontInfos {
+	public static class FontInfos {
 
-		String sansserif;
-		String serif;
+		public String sansserif;
+		public String serif;
 
 		FontInfos(String sansserif, String serif) {
 			this.sansserif = sansserif;

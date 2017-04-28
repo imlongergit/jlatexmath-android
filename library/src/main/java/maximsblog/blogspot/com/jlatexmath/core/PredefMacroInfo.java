@@ -28,17 +28,14 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
-import java.lang.reflect.Method;
-import java.lang.reflect.InvocationTargetException;
-import java.util.HashMap;
-
-import android.content.res.AssetManager;
+import maximsblog.blogspot.com.jlatexmath.core.exception.ParseException;
+import maximsblog.blogspot.com.jlatexmath.core.paser.TeXParser;
 
 /**
  * Class to load the predefined commands. Mainly wrote to avoid the use of the
  * Java reflection.
  */
-class PredefMacroInfo extends MacroInfo {
+public class PredefMacroInfo extends MacroInfo {
 
 	private int id;
 

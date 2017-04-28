@@ -34,6 +34,10 @@ package maximsblog.blogspot.com.jlatexmath.core;
 import android.graphics.Canvas;
 import android.graphics.Color;
 
+import maximsblog.blogspot.com.jlatexmath.core.box.Box;
+import maximsblog.blogspot.com.jlatexmath.core.box.HorizontalBox;
+import maximsblog.blogspot.com.jlatexmath.core.box.VerticalBox;
+
 /**
  * An {@link javax.swing.Icon} implementation that will paint the TeXFormula
  * that created it.

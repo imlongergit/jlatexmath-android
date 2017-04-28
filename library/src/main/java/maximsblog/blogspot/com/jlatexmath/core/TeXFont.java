@@ -29,6 +29,9 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
+import maximsblog.blogspot.com.jlatexmath.core.exception.SymbolMappingNotFoundException;
+import maximsblog.blogspot.com.jlatexmath.core.exception.TextStyleMappingNotFoundException;
+
 /**
  * An interface representing a "TeXFont", which is responsible for all the
  * necessary fonts and font information.

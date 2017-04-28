@@ -28,9 +28,11 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
-final class PredefinedTeXFormulas {
+import maximsblog.blogspot.com.jlatexmath.core.TeXFormula;
 
-	PredefinedTeXFormulas() {
+public final class PredefinedTeXFormulas {
+
+	public PredefinedTeXFormulas() {
 	}
 
 	static {

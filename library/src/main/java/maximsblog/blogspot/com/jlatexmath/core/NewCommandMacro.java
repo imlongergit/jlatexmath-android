@@ -31,6 +31,9 @@ package maximsblog.blogspot.com.jlatexmath.core;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 
+import maximsblog.blogspot.com.jlatexmath.core.exception.ParseException;
+import maximsblog.blogspot.com.jlatexmath.core.paser.TeXParser;
+
 public class NewCommandMacro {
 
 	protected static HashMap<String, String> macrocode = new HashMap<String, String>();

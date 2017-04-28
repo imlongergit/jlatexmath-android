@@ -29,11 +29,12 @@
 
 package maximsblog.blogspot.com.jlatexmath.core;
 
+import android.graphics.Typeface;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import android.content.Context;
-import android.graphics.Typeface;
+import maximsblog.blogspot.com.jlatexmath.core.paser.DefaultTeXFontParser;
 
 /**
  * Contains all the font information for 1 font.
@@ -93,11 +94,11 @@ public class FontInfo {
 	private int ssId;
 	private int ttId;
 	private int itId;
-	protected final String boldVersion;
-	protected final String romanVersion;
-	protected final String ssVersion;
-	protected final String ttVersion;
-	protected final String itVersion;
+	public final String boldVersion;
+	public final String romanVersion;
+	public final String ssVersion;
+	public final String ttVersion;
+	public final String itVersion;
 
 	public FontInfo(int fontId, Object base, String fontName, int unicode,
 			float xHeight, float space, float quad, String boldVersion,

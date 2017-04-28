@@ -28,10 +28,10 @@
 
 package maximsblog.blogspot.com.jlatexmath.dynamic;
 
-import maximsblog.blogspot.com.jlatexmath.core.Atom;
-import maximsblog.blogspot.com.jlatexmath.core.Box;
-import maximsblog.blogspot.com.jlatexmath.core.EmptyAtom;
-import maximsblog.blogspot.com.jlatexmath.core.StrutBox;
+import maximsblog.blogspot.com.jlatexmath.core.atom.Atom;
+import maximsblog.blogspot.com.jlatexmath.core.box.Box;
+import maximsblog.blogspot.com.jlatexmath.core.atom.EmptyAtom;
+import maximsblog.blogspot.com.jlatexmath.core.box.StrutBox;
 import maximsblog.blogspot.com.jlatexmath.core.TeXEnvironment;
 import maximsblog.blogspot.com.jlatexmath.core.TeXFormula;
 

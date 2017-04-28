@@ -31,6 +31,10 @@ package maximsblog.blogspot.com.jlatexmath.core;
 import java.util.List;
 import java.util.Stack;
 
+import maximsblog.blogspot.com.jlatexmath.core.box.Box;
+import maximsblog.blogspot.com.jlatexmath.core.box.HorizontalBox;
+import maximsblog.blogspot.com.jlatexmath.core.box.VerticalBox;
+
 public final class BreakFormula {
 
 	public static Box split(Box box, float width, float interline) {
