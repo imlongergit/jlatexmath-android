@@ -1,25 +1,12 @@
 package com.latex.example;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.util.Random;
-
-import maximsblog.blogspot.com.jlatexmath.core.Insets;
-import maximsblog.blogspot.com.jlatexmath.core.TeXConstants;
-import maximsblog.blogspot.com.jlatexmath.core.TeXFormula;
-import maximsblog.blogspot.com.jlatexmath.core.TeXIcon;
-import maximsblog.blogspot.com.jlatexmath.core.AjLatexMath;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
-import android.graphics.RectF;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v4.app.Fragment;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,8 +14,12 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
+
+import maximsblog.blogspot.com.jlatexmath.core.AjLatexMath;
+import maximsblog.blogspot.com.jlatexmath.core.Insets;
+import maximsblog.blogspot.com.jlatexmath.core.TeXConstants;
+import maximsblog.blogspot.com.jlatexmath.core.TeXFormula;
+import maximsblog.blogspot.com.jlatexmath.core.TeXIcon;
 
 public class ExampleFragment extends Fragment implements OnClickListener {
 
@@ -128,9 +119,11 @@ public class ExampleFragment extends Fragment implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		if (v.getId() == R.id.set_textsize) {
-			mTextSize = Integer.valueOf(mSizeText.getText().toString());
-			setformula();
-		}
+//		if (v.getId() == R.id.set_textsize) {
+//			mTextSize = Integer.valueOf(mSizeText.getText().toString());
+//			setformula();
+//		}
+		Intent intent = new Intent(getActivity(), TestActivity.class);
+		startActivity(intent);
 	}
 }
